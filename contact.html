@@ -7,6 +7,47 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <title>Hotel BT | Contact</title>
+  <!-- <script>
+    function GEEKFORGEEKS() {
+        var name =
+            document.forms.RegForm.Name.value;
+        var email =
+            document.forms.RegForm.EMail.value;
+        var phone =
+            document.forms.RegForm.Telephone.value;
+       
+        var address =
+            document.forms.RegForm.Address.value;
+        var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
+        var regPhone=/^\d{10}$/;                                        // Javascript reGex for Phone Number validation.
+        var regName = /\d+$/g;                                    // Javascript reGex for Name validation
+    
+        if (name == "" || regName.test(name)) {
+            window.alert("Please enter your name properly.");
+            name.focus();
+            return false;
+        }
+    
+        if (address == "") {
+            window.alert("Please enter your address.");
+            address.focus();
+            return false;
+        }
+        
+        if (email == "" || !regEmail.test(email)) {
+            window.alert("Please enter a valid e-mail address.");
+            email.focus();
+            return false;
+        }
+        if (phone == "" || !regPhone.test(phone)) {
+            alert("Please enter valid phone number.");
+            phone.focus();
+            return false;
+        }
+        return true;
+    }
+</script> -->
+    
 </head>
 <body>
   <header>
@@ -14,13 +55,14 @@
             <h1><a href="index.html">HBT</a></h1>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" target="_blank">About</a></li>
+                    <li><a href="about.html" >About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
         </nav>
     </header>
     <section class="contact-form">
-        <form >
+        <form name="myForm">
+            
             <h1><span class="primary-text" > Contact </span> Us</h1>
             <p>Please fillout the form below to contact us</p>
                 <div class="form-group">
@@ -35,24 +77,50 @@
                     <label for="message">Message</label>
                     <textarea name="message" id="message" cols="30" rows="10"></textarea>
                 </div>
-                <button class="btn">Submit</button>
-        </form>
+             <div class="box">
+                <button type="submit" class="btn button link"   >Submit</button>
+                </div> 
+
+        </form> 
+
+        <!-- <form name="RegForm" onsubmit="return GEEKFORGEEKS()" method="post">
+            <p>Name: <input type="text" size="65" name="Name" /></p>
+            <br />
+            <p>Address: <input type="text" size="65" name="Address" />
+            </p>
+            <br />
+            <p>E-mail Address: <input type="text" size="65" name="EMail" /></p>
+            <br />
+            <p>Telephone: <input type="text" size="65" name="Telephone" /></p>
+            <br />
+            <p>Comments: <textarea cols="55" name="Comment"> </textarea></p>
+            <p>
+                <input type="submit" value="send" name="Submit" class="btn button link"/>
+                <input type="reset" value="Reset" name="Reset" class="btn button link"/>
+            </p>
+        </form> -->
     </section>
     <section class="contact-info">
                 <div id="box8">
                     <i class="fas fa-hotel fa-3x"></i>
                     <h3>Location</h3>
                     <p>50 Main st, Boston MA</p>
+                    <a class="route-btn" 
+                    target="_blank" 
+                    href="https://www.google.com/maps/dir//Hotel+Gorzów,+Walczaka+22,+66-400+Gorzów+Wielkopolski"> 
+                    <span class="icon icon-location"></span> 
+                    <span class="text btn">Directions</span> 
+                    </a>
                 </div>
                 <div id="box9">
                     <i class="fas fa-phone fa-3x"></i>
                     <h3>Phone Number</h3>
-                    <p>(617) 555-5555</p>
+                    <a class="pointer" href="tel:+48957221133">+48 95 722 11 33</a>
                 </div>
                 <div id="box10">
                     <i class="fas fa-envelope fa-3x"></i>
                     <h3>Email Address</h3>
-                    <p>frontdesk@hotelbt.co</p>
+                    <a href="mailto:frontdesk@hotelbt.co" title="frontdesk@hotelbt.co">frontdesk@hotelbt.co</a>
                 </div>
         </section>
         
@@ -60,6 +128,6 @@
             <p>Hotel BT &copy; 2019, All RIghts Reserved</p>
         </footer>
     
-    
+       
 </body>
 </html>
